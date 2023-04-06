@@ -1,0 +1,44 @@
+Random rnd = new Random();
+//Variáveis
+double Dado1, Dado2, Soma, count, win, lose;
+count = 1;
+//Definindo um valor 0 para as vars win e lose
+win = 0;
+lose = 0;
+
+while (count <= 10)
+{
+    //números aleatórios de 1 a 7 (mas contando até o 6° num)
+    Dado1 = rnd.Next(1, 7);
+    Dado2 = rnd.Next(1, 7);
+    
+    Soma = Dado1 + Dado2;
+    Console.WriteLine("Dado 1: " + Dado1);
+    Console.WriteLine("Dado 2: " + Dado2);
+    #region Sorteio
+    if (Dado1 == Dado2)
+    {
+        Console.WriteLine("Parabéns, você ganhou!!!");
+        Console.WriteLine("Os dados são iguais!!");
+        //Ganhou, soma 1 na var win 
+        win++;
+
+    }
+    else if (Soma == 7 || Soma == 11)
+    {
+        Console.WriteLine("Parabéns, você ganhou!!!");
+        Console.WriteLine("A soma dos dados é igual a " + Soma);
+        //Ganhou, soma 1 na var win 
+        win++;
+    }
+    else
+    {
+        Console.WriteLine("Que pena, não foi desta vez!!!");
+        //Perdeu, soma 1 na var lose
+        lose++;
+    }
+    Console.WriteLine("Você ganhou " +win+ " vezes!");
+    Console.WriteLine("Você perdeu " +lose+ " vezes!");
+    count++;
+    #endregion Sorteio
+}
