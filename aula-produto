@@ -1,3 +1,4 @@
+//Programa que coleta o nome do produto, três preços e calcula o preço médio. Logo após, mostra na tela qual o maior preço.
 
 String NomeProduto;
 Double Preco1, Preco2, Preco3, PrecoMedio, MPreco, FPreco;
